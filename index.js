@@ -71,7 +71,7 @@ async function captureImage() {
     // Send imageData to server
     try {
         console.log('trying to send image');
-        const response = await fetch(`http://${IP}:${PORT}/upload`, {
+        const response = await fetch(`https://${IP}:${PORT}/upload`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
