@@ -38,6 +38,7 @@ const NGROK_URL = 'https://4936-205-185-105-39.ngrok-free.app'
 
 
 async function startCamera() {
+    log( navigator.mediaDevices.enumerateDevices())
     const constraints = {
         video: {
             facingMode: 'environment' // Use 'user' for front camera
