@@ -56,8 +56,13 @@ async function startCamera() {
 var devices
 async function captureImage() {
     devices = await navigator.mediaDevices.enumerateDevices()
-    window.alert(devices)
-    console.log(devices)
+    // window.alert(devices)
+    // console.log(devices)
+    for (const i of devices){
+        console.log(i)
+        console.log(i.getCapabilities())
+        console.log(typeof i)
+    }
 
     const video = document.getElementById('video');
     if (!video.srcObject) {
