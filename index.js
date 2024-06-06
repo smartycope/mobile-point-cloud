@@ -55,6 +55,9 @@ async function startCamera() {
 }
 
 async function captureImage() {
+    const devices = await navigator.mediaDevices.enumerateDevices()
+    alert(devices)
+
     const video = document.getElementById('video');
     if (!video.srcObject) {
         alert("Camera not started. Please allow camera access.");
@@ -95,4 +98,3 @@ async function captureImage() {
 document.getElementById('capture').addEventListener('click', captureImage);
 
 startCamera();
-alert(await navigator.mediaDevices.enumerateDevices())
