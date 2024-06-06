@@ -1,6 +1,6 @@
 const IP = '10.40.132.201'
 const PORT = 3456
-
+const NGROK_URL = 'https://4936-205-185-105-39.ngrok-free.app'
 // async function startCamera() {
 //     const constraints = {
 //         video: {
@@ -71,7 +71,8 @@ async function captureImage() {
     // Send imageData to server
     try {
         console.log('trying to send image');
-        const response = await fetch(`https://${IP}:${PORT}/upload`, {
+        // const response = await fetch(`https://${IP}:${PORT}/upload`, {
+        const response = await fetch(`${NGROK_URL}/upload`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
