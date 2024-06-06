@@ -53,9 +53,9 @@ async function startCamera() {
         alert("Camera access denied or not available. Please check your settings.");
     }
 }
-
+var devices
 async function captureImage() {
-    const devices = await navigator.mediaDevices.enumerateDevices()
+    devices = await navigator.mediaDevices.enumerateDevices()
     window.alert(devices)
     console.log(devices)
 
